@@ -12,8 +12,8 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) => {
     { name: 'Home', to: 'home' },
     { name: 'About', to: 'about' },
     { name: 'Skills', to: 'skills' },
-    { name: 'Experience', to: 'experience' },
-    { name: 'Projects', to: 'projects' },
+    { name: 'Career', to: 'experience' },
+    { name: 'Highlights', to: 'highlights' },
     { name: 'Contact', to: 'contact' },
   ];
 
@@ -21,7 +21,9 @@ const Header: React.FC<HeaderProps> = ({ isDarkMode, toggleDarkMode }) => {
     <header className="fixed w-full top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <h1 className="text-xl font-bold text-gray-800 dark:text-white">Pratikkumar's Portfolio</h1>
+          <a href="#home" className="text-2xl font-bold text-gray-900 dark:text-white">
+            Pratikkumar's Portfolio
+            </a>
           <div className="flex items-center space-x-8">
             {navItems.map((item) => (
               <Link

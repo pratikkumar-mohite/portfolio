@@ -7,27 +7,35 @@ const Experience: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'work' | 'education'>('work');
 
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800 ">
+    <section id="experience" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900">
       <div className="container mx-auto px-6">
+      <div className="text-center mb-16">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold text-gray-800 dark:text-white mb-8"
+          className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
         >
           Career Highlights
         </motion.h2>
+        <motion.p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            A proven track record of delivering scalable cloud solutions and continuous learning in modern technologies.
+          </motion.p>
+        </div>
         
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="flex space-x-4 mb-8"
+          className="flex space-x-4 mb-8 text-center"
         >
+          <div className="flex container px-8">
+          <div className="flex max-w-4xl mx-auto text-center">
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
           <button
-            className={`flex items-center px-4 py-2 rounded-lg ${
+            className={`flex items-center px-4 py-2 text-center rounded-lg ${
               activeTab === 'work'
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
@@ -38,7 +46,7 @@ const Experience: React.FC = () => {
             Work Experience
           </button>
           <button
-            className={`flex items-center px-4 py-2 rounded-lg ${
+            className={`flex items-center px-4 py-2 text-center rounded-lg ${
               activeTab === 'education'
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
@@ -48,6 +56,9 @@ const Experience: React.FC = () => {
             <GraduationCap className="w-5 h-5 mr-2" />
             Education
           </button>
+          </div>
+          </div>
+          </div>
         </motion.div>
 
         <div className="relative">
@@ -62,7 +73,7 @@ const Experience: React.FC = () => {
                   viewport={{ once: true }}
                   className="relative pl-8 pb-8"
                 >
-                  <div className="absolute left-0 top-0 h-full w-0.5 bg-blue-600"></div>
+                  <div className="absolute left-0 top-0 h-full w-0.5 bg-blue-600 text-center"></div>
                   <div className="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-blue-600"></div>
                   <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
                     <h3 className="text-xl font-bold text-gray-800 dark:text-white">{exp.title}</h3>

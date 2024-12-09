@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import BookMeeting from './components/BookMeeting';
+import HomePage from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
+import ArticlesPage from './pages/ArticlesPage';
+import LinkedInPage from './pages/LinkedinPage';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import Highlights from './components/Highlights';
-import Contact from './components/Contact';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -25,21 +23,22 @@ function App() {
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
-
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
-      <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Highlights />
-      <Projects />
-      <BookMeeting />
-      <Contact />
-      <Footer />
-      <ScrollToTop />
-    </div>
+    <ThemeProvider>
+      <Router>
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-200">
+        <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/linkedin-posts" element={<LinkedInPage />} />
+          </Routes>
+          <Footer />
+          <ScrollToTop />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 

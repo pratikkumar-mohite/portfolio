@@ -8,10 +8,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">Get in Touch</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Have a project in mind? Let's work together to create something amazing.
           </p>
@@ -24,15 +24,15 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="text-blue-600" size={20} />
-                  <span className="text-gray-600">example@email.com</span>
+                  <span className="text-gray-600 dark:text-white">mohite770.pm@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="text-blue-600" size={20} />
-                  <span className="text-gray-600">+1 (123) 456-7890</span>
+                  <span className="text-gray-600 dark:text-white">+91 7030746439</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="text-blue-600" size={20} />
-                  <span className="text-gray-600">New York, NY</span>
+                  <span className="text-gray-600 dark:text-white">Pune, Maharashtra</span>
                 </div>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Contact = () => {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-gray-700 mb-2">
+              <label htmlFor="name" className="block text-gray-700 dark:text-white mb-2">
                 Name
               </label>
               <input
@@ -51,7 +51,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-gray-700 dark:text-white mb-2">
                 Email
               </label>
               <input
@@ -62,7 +62,7 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-gray-700 mb-2">
+              <label htmlFor="message" className="block text-gray-700 dark:text-white mb-2">
                 Message
               </label>
               <textarea

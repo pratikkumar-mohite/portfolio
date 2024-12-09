@@ -13,7 +13,7 @@ const Footer = () => {
           
           <div className="flex space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/pratikkumar-mohite"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition-colors"
@@ -21,7 +21,7 @@ const Footer = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/pratikkumar-mohite"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition-colors"
@@ -29,7 +29,7 @@ const Footer = () => {
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:example@email.com"
+              href="mailto:mohite770.pm@gmail.com"
               className="hover:text-blue-400 transition-colors"
             >
               <Mail size={24} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import profileImage from '../assets/profile.jpg';
 
 const Hero: React.FC = () => {
   return (
@@ -46,7 +47,7 @@ const Hero: React.FC = () => {
             className="flex space-x-4"
           >
               <a
-                href="https://github.com"
+                href="https://github.com/pratikkumar-mohite"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-colors"
@@ -54,7 +55,7 @@ const Hero: React.FC = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/pratikkumar-mohite"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
@@ -62,7 +63,7 @@ const Hero: React.FC = () => {
                 <Linkedin size={24} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/DotSlashMohite"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-blue-400 text-white rounded-full hover:bg-blue-500 transition-colors"
@@ -72,17 +73,19 @@ const Hero: React.FC = () => {
           </motion.div>
           <motion.div className="flex space-x-4">
               <a
-                href="#contact"
+                href="https://topmate.io/pratikkumar_mohite/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center space-x-2 hover:bg-blue-700 transition-colors"
               >
-                <span>Get in touch</span>
+                <span>Book Meeting</span>
                 <ArrowRight size={20} />
               </a>
               <a
-                href="#projects"
+                href="#contact"
                 className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
-                View Projects
+                Get in touch
               </a>
             </motion.div>
         </motion.div>
@@ -95,9 +98,9 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="absolute -inset-4 bg-indigo-500/20 dark:bg-indigo-500/10 rounded-full blur-2xl" />
             <img
-              src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop&q=60"
+              src={profileImage}
               alt="Profile"
-              className="relative rounded-full w-64 h-64 object-cover shadow-xl ring-4 ring-indigo-100 dark:ring-indigo-900"
+              className="relative rounded-full w-80 h-80 object-cover shadow-xl ring-4 ring-indigo-100 dark:ring-indigo-900"
             />
           </div>
         </motion.div>
