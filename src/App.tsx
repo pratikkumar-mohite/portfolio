@@ -30,9 +30,9 @@ function App() {
         <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
+            {/* <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/articles" element={<ArticlesPage />} />
-            <Route path="/linkedin-posts" element={<LinkedInPage />} />
+            <Route path="/linkedin-posts" element={<LinkedInPage />} /> */}
           </Routes>
           <Footer />
           <ScrollToTop />
