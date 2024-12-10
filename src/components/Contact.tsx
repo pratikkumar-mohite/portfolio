@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { sendEmail } from '../services/emailService';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -46,10 +47,10 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">Get in Touch</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <motion.h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">Get in Touch</motion.h2>
+          <motion.p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Have a project in mind? Let's work together to create something amazing.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
