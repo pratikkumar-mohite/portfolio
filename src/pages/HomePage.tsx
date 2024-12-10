@@ -1,5 +1,4 @@
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Skills from '../components/Skills';
@@ -21,7 +20,6 @@ function App() {
       <BookMeeting />
       <Contact />
       <Analytics />
-      <SpeedInsights />
     </div>
   );
 }
